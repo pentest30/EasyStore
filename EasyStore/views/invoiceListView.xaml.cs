@@ -47,6 +47,12 @@ namespace EasyStore.views
         private void PrintBtn_OnClick(object sender, RoutedEventArgs e)
         {
             var invoice = InvoiceDg.SelectedItem as Invoice;
+            if (invoice == null)
+            {
+                MessageBox.Show("Séléctionner une facture", "Inforation", MessageBoxButton.OK,
+                    MessageBoxImage.Information);
+                return;
+            }
             string[] headers = { "Désignation", "Prix unitaire", "Quantité", "THT", "TTC" };
             float[] columnWidths = { 200f, 200, 200, 200f, 140f };
             Store store;
@@ -190,6 +196,12 @@ namespace EasyStore.views
         private void ExpPdfBtn_OnClick(object sender, RoutedEventArgs e)
         {
             var invoice = InvoiceDg.SelectedItem as Invoice;
+            if (invoice == null)
+            {
+                MessageBox.Show("Séléctionner une facture", "Inforation", MessageBoxButton.OK,
+                    MessageBoxImage.Information);
+                return;
+            }
             string[] headers = { "Désignation", "Unité de mesure", "Prix unitaire", "Quantité", "THT", "TTC" };
             float[] columnWidths = { 200f, 200, 200, 200, 200f, 140f };
             Store store;
@@ -332,8 +344,13 @@ namespace EasyStore.views
 
         private void RptBtn_OnClick(object sender, RoutedEventArgs e)
         {
-               var invoice = InvoiceDg.SelectedItem as Invoice;
-            if (invoice==null) return;
+           var invoice = InvoiceDg.SelectedItem as Invoice;
+            if (invoice == null)
+            {
+                MessageBox.Show("Séléctionner une facture", "Inforation", MessageBoxButton.OK,
+                    MessageBoxImage.Information);
+                return;
+            }
             var  list = new List<InvoiceReportVm>();
             using (var db =  new ObjectContext())
             {
@@ -369,7 +386,12 @@ namespace EasyStore.views
         private void BlRptBtn_OnClick(object sender, RoutedEventArgs e)
         {
               var invoice = InvoiceDg.SelectedItem as Invoice;
-            if (invoice==null) return;
+            if (invoice == null)
+            {
+                MessageBox.Show("Séléctionner une facture", "Inforation", MessageBoxButton.OK,
+                    MessageBoxImage.Information);
+                return;
+            }
             var  list = new List<InvoiceReportVm>();
             using (var db =  new ObjectContext())
             {
