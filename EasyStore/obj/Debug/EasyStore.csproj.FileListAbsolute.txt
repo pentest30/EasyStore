@@ -1,0 +1,161 @@
+E:\Code sources\EasyStore\EasyStore\bin\Debug\EasyStore.exe.config
+E:\Code sources\EasyStore\EasyStore\bin\Debug\EasyStore.exe
+E:\Code sources\EasyStore\EasyStore\bin\Debug\EasyStore.pdb
+E:\Code sources\EasyStore\EasyStore\bin\Debug\AutoMapper.dll
+E:\Code sources\EasyStore\EasyStore\bin\Debug\ControlzEx.dll
+E:\Code sources\EasyStore\EasyStore\bin\Debug\itextsharp.dll
+E:\Code sources\EasyStore\EasyStore\bin\Debug\linq2db.dll
+E:\Code sources\EasyStore\EasyStore\bin\Debug\LoadingIndicators.WPF.dll
+E:\Code sources\EasyStore\EasyStore\bin\Debug\MahApps.Metro.dll
+E:\Code sources\EasyStore\EasyStore\bin\Debug\MahApps.Metro.IconPacks.dll
+E:\Code sources\EasyStore\EasyStore\bin\Debug\System.Net.Http.dll
+E:\Code sources\EasyStore\EasyStore\bin\Debug\System.Windows.Interactivity.dll
+E:\Code sources\EasyStore\EasyStore\bin\Debug\WPFLocalizeExtension.dll
+E:\Code sources\EasyStore\EasyStore\bin\Debug\XAMLMarkupExtensions.dll
+E:\Code sources\EasyStore\EasyStore\bin\Debug\AutoMapper.xml
+E:\Code sources\EasyStore\EasyStore\bin\Debug\ControlzEx.pdb
+E:\Code sources\EasyStore\EasyStore\bin\Debug\itextsharp.xml
+E:\Code sources\EasyStore\EasyStore\bin\Debug\linq2db.pdb
+E:\Code sources\EasyStore\EasyStore\bin\Debug\linq2db.xml
+E:\Code sources\EasyStore\EasyStore\bin\Debug\LoadingIndicators.WPF.pdb
+E:\Code sources\EasyStore\EasyStore\bin\Debug\MahApps.Metro.pdb
+E:\Code sources\EasyStore\EasyStore\bin\Debug\MahApps.Metro.xml
+E:\Code sources\EasyStore\EasyStore\bin\Debug\MahApps.Metro.IconPacks.pdb
+E:\Code sources\EasyStore\EasyStore\bin\Debug\MahApps.Metro.IconPacks.xml
+E:\Code sources\EasyStore\EasyStore\bin\Debug\System.Net.Http.xml
+E:\Code sources\EasyStore\EasyStore\bin\Debug\WPFLocalizeExtension.pdb
+E:\Code sources\EasyStore\EasyStore\bin\Debug\WPFLocalizeExtension.xml
+E:\Code sources\EasyStore\EasyStore\bin\Debug\XAMLMarkupExtensions.pdb
+E:\Code sources\EasyStore\EasyStore\bin\Debug\XAMLMarkupExtensions.xml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\resources\checkboxstyle.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\resources\CustomAccent.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\resources\datagridstyle.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\resources\expanderstyle.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\resources\gridsplitterstyle.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\resources\shared.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\resources\tabcontrolstyle.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\resources\textblockstyle.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\resources\textboxstyle.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\resources\toolBarStyle.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\MainWindow.g.cs
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\customerview.g.cs
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\invoiceItemView.g.cs
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\invoiceListView.g.cs
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\productView.g.cs
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\stockView.g.cs
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\supplierView.g.cs
+E:\Code sources\EasyStore\EasyStore\obj\Debug\App.g.cs
+E:\Code sources\EasyStore\EasyStore\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore_MarkupCompile.cache
+E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore_MarkupCompile.lref
+E:\Code sources\EasyStore\EasyStore\obj\Debug\App.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\MainWindow.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\resources\buttonstyle.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\resources\contextmenustyle.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\resources\metrocirclebuttonstyle.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\resources\metroribbonstyle.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\resources\metrosearchboxstyle.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\resources\metrotogglestyle.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\resources\metrotooltipstyle.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\resources\metrowindowstyle.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\resources\popuptogglestyle.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\customerview.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\invoiceItemView.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\invoiceListView.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\productView.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\stockView.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\supplierView.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.g.resources
+E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.Properties.Resources.resources
+E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.csproj.GenerateResource.Cache
+E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.csproj.CoreCompileInputs.cache
+E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.exe
+E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.pdb
+E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.csprojResolveAssemblyReference.cache
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\EasyStore.exe.config
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\EasyStore.exe
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\EasyStore.pdb
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\AutoMapper.dll
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\ControlzEx.dll
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\itextsharp.dll
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\linq2db.dll
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\LoadingIndicators.WPF.dll
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\MahApps.Metro.dll
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\MahApps.Metro.IconPacks.dll
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\WPFLocalizeExtension.dll
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\XAMLMarkupExtensions.dll
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\AutoMapper.xml
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\ControlzEx.pdb
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\itextsharp.xml
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\linq2db.pdb
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\linq2db.xml
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\LoadingIndicators.WPF.pdb
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\MahApps.Metro.pdb
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\MahApps.Metro.xml
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\MahApps.Metro.IconPacks.pdb
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\MahApps.Metro.IconPacks.xml
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\WPFLocalizeExtension.pdb
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\WPFLocalizeExtension.xml
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\XAMLMarkupExtensions.pdb
+C:\Users\pc\Documents\EasyStore\EasyStore\bin\Debug\XAMLMarkupExtensions.xml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\EasyStore.csprojResolveAssemblyReference.cache
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\resources\checkboxstyle.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\resources\CustomAccent.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\resources\datagridstyle.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\resources\expanderstyle.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\resources\gridsplitterstyle.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\resources\shared.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\resources\tabcontrolstyle.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\resources\textblockstyle.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\resources\textboxstyle.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\resources\toolBarStyle.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\MainWindow.g.cs
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\views\customerview.g.cs
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\views\invoiceItemView.g.cs
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\views\invoiceListView.g.cs
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\views\productView.g.cs
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\views\stockView.g.cs
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\views\supplierView.g.cs
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\App.g.cs
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\EasyStore_MarkupCompile.cache
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\EasyStore_MarkupCompile.lref
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\App.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\MainWindow.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\resources\buttonstyle.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\resources\contextmenustyle.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\resources\metrocirclebuttonstyle.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\resources\metroribbonstyle.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\resources\metrosearchboxstyle.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\resources\metrotogglestyle.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\resources\metrotooltipstyle.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\resources\metrowindowstyle.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\resources\popuptogglestyle.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\views\customerview.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\views\invoiceItemView.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\views\invoiceListView.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\views\productView.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\views\stockView.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\views\supplierView.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\EasyStore.g.resources
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\EasyStore.Properties.Resources.resources
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\EasyStore.csproj.GenerateResource.Cache
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\EasyStore.csproj.CoreCompileInputs.cache
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\EasyStore.exe
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\EasyStore.pdb
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\views\categoryView.g.cs
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\views\StoreWin.g.cs
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\views\categoryView.baml
+C:\Users\pc\Documents\EasyStore\EasyStore\obj\Debug\views\StoreWin.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\InvoiceReportView.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\categoryView.g.cs
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\InvoiceReportView.g.cs
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\StoreWin.g.cs
+E:\Code sources\EasyStore\EasyStore\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\categoryView.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\StoreWin.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\BlReportView.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\BlReportView.g.cs
+E:\Code sources\EasyStore\EasyStore\obj\Debug\RdlCompile.cache
+E:\Code sources\EasyStore\EasyStore\obj\Debug\RdlCompile.compiled

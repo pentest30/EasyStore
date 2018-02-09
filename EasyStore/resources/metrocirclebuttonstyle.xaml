@@ -1,0 +1,52 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib"
+                    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+                    xmlns:icons="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                    xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                    xmlns:helpers="clr-namespace:EasyStore.helpers">
+  <Style x:Key="MetroCircleButtonBase" TargetType="{x:Type helpers:MetroCircleButton}">
+    <Setter Property="FrameworkElement.OverridesDefaultStyle" Value="true"/>
+    <Setter Property="helpers:MetroCircleButton.IconSize" Value="16"/>
+    <Setter Property="Control.Padding" Value="6"/>
+    <Setter Property="FrameworkElement.HorizontalAlignment" Value="Center"/>
+    <Setter Property="FrameworkElement.VerticalAlignment" Value="Center"/>
+    <Setter Property="Control.Background" Value="Transparent"/>
+    <Setter Property="Control.Foreground" Value="{DynamicResource HighlightBrush}"/>
+    <Setter Property="Control.BorderBrush" Value="{DynamicResource GrayBrush5}"/>
+    <Setter Property="Control.BorderThickness" Value="2"/>
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type helpers:MetroCircleButton}">
+          <Grid>
+            <Ellipse x:Name="Ellipse" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                     Fill="{TemplateBinding Control.Background}" Stroke="{TemplateBinding Control.BorderBrush}"
+                     StrokeThickness="2"/>
+            <icons:PackIconMaterial x:Name="Icon" FrameworkElement.Margin="{TemplateBinding Control.Padding}"
+                              Kind="{TemplateBinding helpers:MetroCircleButton.IconKind}"
+                              Control.Foreground="{TemplateBinding Control.Foreground}"
+                              FrameworkElement.Width="{TemplateBinding helpers:MetroCircleButton.IconSize}"
+                              FrameworkElement.Height="{TemplateBinding helpers:MetroCircleButton.IconSize}"
+                              FrameworkElement.VerticalAlignment="Center" FrameworkElement.HorizontalAlignment="Center"/>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="true">
+              <Setter Value="{DynamicResource AccentColorBrush}" Property="Control.BorderBrush"/>
+              <Setter Value="{DynamicResource HighlightBrush}" Property="Control.Foreground"/>
+            </Trigger>
+            <Trigger Property="ButtonBase.IsPressed" Value="true">
+              <Setter Value="{DynamicResource AccentColorBrush}" Property="Control.Background"/>
+              <Setter Value="{DynamicResource HighlightBrush}" Property="Control.BorderBrush"/>
+              <Setter Value="{DynamicResource IdealForegroundColorBrush}" Property="Control.Foreground"/>
+            </Trigger>
+            <Trigger Property="UIElement.IsEnabled" Value="false">
+              <Setter Value="{DynamicResource GrayBrush9}" Property="Control.Background"/>
+              <Setter Value="{DynamicResource GrayBrush5}" Property="Control.BorderBrush"/>
+              <Setter Value="{DynamicResource GrayBrush3}" Property="Control.Foreground"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

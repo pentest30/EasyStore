@@ -1,0 +1,72 @@
+﻿<metro:MetroWindow x:Class="EasyStore.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EasyStore"
+        xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                  
+        xmlns:my="clr-namespace:EasyStore.helpers"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:wpf="clr-namespace:LoadingIndicators.WPF;assembly=LoadingIndicators.WPF"
+        mc:Ignorable="d"
+                   Style="{StaticResource MetroWindow}"
+        Title="EASY STORE" WindowState="Maximized" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <my:MetroRibbon Style="{StaticResource MetroRibbonBase}">
+            <TabItem  Style="{StaticResource TabItemBase}" Header="Store management" Margin="0" Padding="0">
+                <StackPanel Orientation="Horizontal" >
+                    
+                    <my:RibbonGroup Title="Article et stock" Style="{StaticResource RibbonGroupBase}" >
+                        <StackPanel Orientation="Horizontal">
+                            <my:RibbonButton Margin="5"  Click="StoreBtn_OnClick"  Style="{StaticResource RibbonButtonBase}" x:Name="StoreBtn"  Content="Etablissement" IconKind="Store" IsEnlarged="true" ></my:RibbonButton>
+
+                            <my:RibbonButton Style="{StaticResource RibbonButtonBase}" x:Name="CatBtn"  Content="Catégorie" IconKind="Group" Margin="5" IsEnlarged="true"></my:RibbonButton>
+
+                            <my:RibbonButton Style="{StaticResource RibbonButtonBase}" Content="Articles" x:Name="ProductBtn" Click="ProductBtn_OnClick" IconKind="PlaylistCheck" Margin="5" IsEnlarged="True"></my:RibbonButton>
+                        </StackPanel>
+                        
+                    </my:RibbonGroup>
+                    <!--<my:RibbonGroup Title="Stock" Style="{StaticResource RibbonGroupBase}" >
+                        <StackPanel Orientation="Horizontal">
+                            <my:RibbonButton Style="{StaticResource RibbonButtonBase}" x:Name="SuppBtn" Click="SuppBtn_OnClick" Content="Fournissseurs" IconKind="Bus" Margin="5" IsEnlarged="True"></my:RibbonButton>
+                         
+                            <my:RibbonButton x:Name="StockBtn" Click="StockBtn_OnClick" Style="{StaticResource RibbonButtonBase}" Content="Stock" IconKind="Package" Margin="5" IsEnlarged="True"></my:RibbonButton>
+                        </StackPanel>
+                    </my:RibbonGroup>-->
+                    <my:RibbonGroup Title="Vente et facturation" Style="{StaticResource RibbonGroupBase}" >
+                        <StackPanel Orientation="Horizontal">
+
+                            <my:RibbonButton x:Name="CustomerBtn" Click="CustomerBtn_OnClick" Style="{StaticResource RibbonButtonBase}" Content="Clients"  IconKind="Account" IsEnlarged="true"/>
+
+                            <my:RibbonButton Style="{StaticResource RibbonButtonBase}"   Content="Factures" IconKind="Bank" x:Name="Invoicebtn" Click="Invoicebtn_OnClick" IsEnlarged="true"></my:RibbonButton>
+
+                            <my:RibbonButton Click="NewOrderBtn_OnClick" Style="{StaticResource RibbonButtonBase}" Content="Nouvelle Vente" x:Name="NewOrderBtn"  IconKind="Sale" IsEnlarged="true"></my:RibbonButton>
+                        </StackPanel>
+                    </my:RibbonGroup>
+
+                </StackPanel>
+
+            </TabItem>
+       
+        </my:MetroRibbon>
+
+        <DockPanel Grid.Row="1">
+            <Grid  DockPanel.Dock="Top" Margin="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <ContentControl FontSize="14" Name="ContentControl"/>
+                <wpf:LoadingIndicator  Name="prgTest"  SpeedRatio="2" IsActive="False" Style="{DynamicResource LoadingIndicatorArcsRingStyle}"/>
+
+            </Grid>
+        </DockPanel>
+
+    </Grid>
+</metro:MetroWindow>

@@ -1,0 +1,35 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Style x:Key="HSplitter" TargetType="{x:Type GridSplitter}">
+    <Setter Property="FrameworkElement.Margin" Value="0,10"/>
+    <Setter Property="FrameworkElement.Height" Value="1"/>
+    <Setter Property="FrameworkElement.HorizontalAlignment" Value="Stretch"/>
+    <Setter Property="FrameworkElement.VerticalAlignment" Value="Center"/>
+    <Setter Property="GridSplitter.ResizeDirection" Value="Rows"/>
+    <Setter Property="Control.Background" Value="{DynamicResource GrayBrush5}"/>
+    <Setter Property="GridSplitter.ShowsPreview" Value="true"/>
+    <Style.Triggers>
+      <Trigger Property="UIElement.IsMouseOver" Value="true">
+        <Setter Property="FrameworkElement.Margin" Value="0,8"/>
+        <Setter Property="FrameworkElement.Height" Value="5"/>
+        <Setter Property="Control.Background" Value="{DynamicResource AccentColorBrush}"/>
+      </Trigger>
+    </Style.Triggers>
+  </Style>
+  <Style x:Key="VSplitter" TargetType="{x:Type GridSplitter}">
+    <Setter Property="FrameworkElement.Margin" Value="10,0"/>
+    <Setter Property="FrameworkElement.Width" Value="1"/>
+    <Setter Property="FrameworkElement.HorizontalAlignment" Value="Center"/>
+    <Setter Property="FrameworkElement.VerticalAlignment" Value="Stretch"/>
+    <Setter Property="GridSplitter.ResizeDirection" Value="Columns"/>
+    <Setter Property="Control.Background" Value="{DynamicResource GrayBrush5}"/>
+    <Setter Property="GridSplitter.ShowsPreview" Value="true"/>
+    <Style.Triggers>
+      <Trigger Property="UIElement.IsMouseOver" Value="true">
+        <Setter Property="FrameworkElement.Margin" Value="8,0"/>
+        <Setter Property="FrameworkElement.Width" Value="5"/>
+        <Setter Property="Control.Background" Value="{DynamicResource AccentColorBrush}"/>
+      </Trigger>
+    </Style.Triggers>
+  </Style>
+</ResourceDictionary>

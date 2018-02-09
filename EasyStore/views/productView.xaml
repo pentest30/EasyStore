@@ -1,0 +1,142 @@
+﻿<UserControl x:Class="EasyStore.views.productView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EasyStore.views"
+             xmlns:converters="clr-namespace:EasyStore.converters"
+             xmlns:helpers="clr-namespace:EasyStore.helpers"
+             xmlns:models="clr-namespace:EasyStore.models"
+             xmlns:entities="clr-namespace:EasyStore.Entities"
+             xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="600">
+    <UserControl.Resources>
+        <converters:Nan2Visible x:Key="Nan2Visible"/>
+        <converters:Visible2Enable x:Key="Visible2Enable"/>
+        <converters:Visible2NDisable x:Key="Visible2Disable"/>
+        <ObjectDataProvider x:Key="DataFromEnum" MethodName="GetValues"
+                            ObjectType="{x:Type System:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="entities:MesureUnit"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </UserControl.Resources>
+    <Grid >
+        <Grid Grid.Column="0" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+
+            <TextBlock Grid.Row="0" Style="{StaticResource Header3}" Margin="5,0" VerticalAlignment="Center"
+                       Text="Liste des articles"/>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <DockPanel Grid.Column="0">
+                    <StackPanel DockPanel.Dock="Top">
+                        <ToolBarTray >
+                            <ToolBar >
+                                <helpers:MetroCircleButton Margin="2" Click="RefreshBtn_OnClick"  Style="{StaticResource MetroCircleButtonBase}" x:Name="RefreshBtn" IconKind="Refresh" />
+                                <helpers:MetroCircleButton Margin="2"   Style="{StaticResource MetroCircleButtonBase}" x:Name="SaveBtn" Click="SaveBtn_OnClick" Content="Ajout" IconKind="ContentSave" />
+                            </ToolBar>
+                        </ToolBarTray>
+                        <Separator/>
+                    </StackPanel>
+                    <Grid DockPanel.Dock="Bottom" Name="CustomerInfo">
+                        <Grid.DataContext>
+                            <models:ProductViewModel/>
+                        </Grid.DataContext>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Grid.Row="0">Désignation :</TextBlock>
+                        <TextBox  Margin="2" 
+                                  Grid.Column="1"
+                                  CharacterCasing="Upper"
+                                  Grid.Row="0" 
+                                  Text="{Binding Path=Name, ValidatesOnDataErrors=true, NotifyOnValidationError=true , UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBlock Grid.Column="0" Grid.Row="1">Catégorie:</TextBlock>
+                        <ComboBox  Margin="2" Grid.Column="1" Grid.Row="1" DisplayMemberPath="Name"
+                                   SelectedValue="{Binding  Category_Id}" 
+                                   controls:TextBoxHelper.Watermark="Séléctionner une catégorie"
+                                   SelectedValuePath="Id"/>
+                       <TextBlock Grid.Column="0" Grid.Row="3">Qnt. d'alerte :</TextBlock>
+                        <controls:NumericUpDown   Margin="2" Grid.Column="1" Grid.Row="3" Value="{Binding Path=MinQnt, UpdateSourceTrigger=PropertyChanged}"/>
+                      <TextBlock Grid.Column="0" Grid.Row="2">Unité de mesure</TextBlock>
+                        <ComboBox  ItemsSource="{Binding Source={StaticResource DataFromEnum} }" SelectedItem="{Binding MesureUnit}" 
+                                  SelectedValuePath="Id" Name="CbMeasureUnit" Margin="2"  Grid.Column="1" Grid.Row="2"/>
+                        <TextBlock Grid.Column="0" Grid.Row="4">Prix unitaire:</TextBlock>
+                        <controls:NumericUpDown  Margin="2" Grid.Column="1" Grid.Row="4" Value="{Binding Path=UnitPrice,ValidatesOnDataErrors=true, NotifyOnValidationError=true, UpdateSourceTrigger=PropertyChanged}">
+                           
+                        </controls:NumericUpDown>
+                        <TextBlock Grid.Column="0" Grid.Row="5">Qnt stock:</TextBlock>
+                        <controls:NumericUpDown IsEnabled="False"  Margin="2" Grid.Column="1" Grid.Row="5" Value="{Binding Path=Qnt, UpdateSourceTrigger=PropertyChanged}">
+
+                        </controls:NumericUpDown>
+                        <Separator Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6"/>
+                        <controls:NumericUpDown Width="200" Grid.Column="0" Grid.Row="7"   x:Name="TxtQnt" controls:TextBoxHelper.Watermark="Quantité" Margin="2" />
+                        <helpers:MetroFlatButton   Style="{StaticResource ButtonBase}"  Grid.Column="1" Grid.Row="7"  Content="Approvisionner le stock"  Margin="2" x:Name="AddBtn" Click="AddBtn_OnClicktn_OnClick"/>
+
+                       
+                    </Grid>
+                </DockPanel>
+                <GridSplitter Grid.Column="1" Style="{StaticResource VSplitter}"/>
+
+                <DockPanel Grid.Column="2">
+                    <StackPanel Orientation="Vertical" DockPanel.Dock="Top">
+                        <ToolBarTray >
+                            <ToolBar >
+
+
+                                <helpers:MetroCircleButton Margin="2"  Style="{StaticResource MetroCircleButtonBase}" x:Name="DEletebtn" Click="DEletebtn_OnClick" IconKind="Delete" />
+                                 <helpers:MetroCircleButton Margin="2"  Style="{StaticResource MetroCircleButtonBase}" Content="Ajout" IconKind="FilePdf" Click="ExpPdfBtn_OnClick" x:Name="ExpPdfBtn" />
+                             
+
+                            </ToolBar>
+                        </ToolBarTray>
+                        <helpers:MetroSearchBox SelectionChanged="TextBoxBase_OnSelectionChanged" MatchCase="False" MatchWords="False"  Margin="2" controls:TextBoxHelper.Watermark="Recherche" Grid.Column="1" VerticalAlignment="Stretch"   HorizontalAlignment="Stretch" ></helpers:MetroSearchBox>
+
+                        <Separator/>
+                    </StackPanel>
+                    <DataGrid SelectionChanged="InvoiceDg_OnSelectionChanged" CanUserAddRows="False" AutoGenerateColumns="False" x:Name="InvoiceDg" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="*"  Header="Désignation" Binding="{Binding Name}"/>
+                            <DataGridTextColumn  Header="Prix unitaire" Binding="{Binding UnitPrice}"/>
+                            <DataGridTextColumn  Header="Quantité d'alerte" Binding="{Binding MinQnt}"/>
+                            <DataGridTextColumn Header="Quantité" Binding="{Binding Qnt}"/>
+                            <DataGridTextColumn Width="*" Header="Unité de mesure" Binding="{Binding MesureUnit}"/>
+                          </DataGrid.Columns>
+
+                        <DataGrid.DataContext>
+                            <entities:Product/>
+                        </DataGrid.DataContext>
+
+                    </DataGrid>
+                </DockPanel>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,113 @@
+﻿<UserControl x:Class="EasyStore.views.supplierView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:converters="clr-namespace:EasyStore.converters"
+             xmlns:helpers="clr-namespace:EasyStore.helpers"
+             xmlns:models="clr-namespace:EasyStore.models"
+             xmlns:entities="clr-namespace:EasyStore.Entities"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <converters:NotNull2Enable x:Key="NotNull2Enable"/>
+    </UserControl.Resources>
+    <Grid >
+        <Grid Grid.Column="0" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+
+            <TextBlock Grid.Row="0" Style="{StaticResource Header3}" Margin="5,0" VerticalAlignment="Center"
+                       Text="Liste des fournisseurs"/>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <DockPanel Grid.Column="0">
+                    <StackPanel DockPanel.Dock="Top">
+                        <ToolBarTray >
+                            <ToolBar >
+                                <helpers:MetroCircleButton Margin="2" Click="RefreshBtn_OnClick"  Style="{StaticResource MetroCircleButtonBase}" x:Name="RefreshBtn" IconKind="Refresh" />
+                                <helpers:MetroCircleButton Margin="2"   Style="{StaticResource MetroCircleButtonBase}" x:Name="SaveBtn" Click="SaveBtn_OnClick" Content="Ajout" IconKind="ContentSave" />
+                            </ToolBar>
+                        </ToolBarTray>
+                        <Separator/>
+                    </StackPanel>
+                    <Grid DockPanel.Dock="Bottom" Name="CustomerInfo">
+                        <Grid.DataContext>
+                            <models:SupplierViewModel/>
+                        </Grid.DataContext>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0">Nom:</Label>
+                        <TextBox  Margin="2" 
+                                  CharacterCasing="Upper"
+                                  Grid.Column="1" 
+                                  Grid.Row="0" 
+                                  Text="{Binding Path=FirstName, ValidatesOnDataErrors=true, NotifyOnValidationError=true , UpdateSourceTrigger=PropertyChanged}"/>
+                        <Label Grid.Column="0" Grid.Row="1">Prénom:</Label>
+                        <TextBox CharacterCasing="Upper"  Margin="2" Grid.Column="1" Grid.Row="1" Text="{Binding Path=LastName, ValidatesOnDataErrors=true, NotifyOnValidationError=true , UpdateSourceTrigger=PropertyChanged}"/>
+                        <Label Grid.Column="0" Grid.Row="2">Tél:</Label>
+                        <TextBox Margin="2" Grid.Column="1" Grid.Row="2" Text="{Binding Path=Tel, UpdateSourceTrigger=PropertyChanged}"/>
+                        <Label Grid.Column="0" Grid.Row="3">Ville:</Label>
+                        <TextBox  Margin="2" Grid.Column="1" Grid.Row="3" Text="{Binding Path=City, UpdateSourceTrigger=PropertyChanged}"/>
+                        <Label Grid.Column="0" Grid.Row="4">Adresse:</Label>
+                        <TextBox  Margin="2" Grid.Column="1" Grid.Row="4" Grid.RowSpan="2" Text="{Binding Path=Street1, UpdateSourceTrigger=PropertyChanged}"/>
+
+                    </Grid>
+                </DockPanel>
+                <GridSplitter Grid.Column="1" Style="{StaticResource VSplitter}"/>
+
+                <DockPanel Grid.Column="2">
+                    <StackPanel DockPanel.Dock="Top">
+                        <ToolBarTray >
+                            <ToolBar >
+
+
+                                <helpers:MetroCircleButton Margin="2" ToolTip="Suppression" Style="{StaticResource MetroCircleButtonBase}" x:Name="DEletebtn" Click="DEletebtn_OnClick" IconKind="Delete" />
+                        
+
+                            </ToolBar>
+                        </ToolBarTray>
+                        <Separator/>
+                    </StackPanel>
+                    <DataGrid SelectionChanged="InvoiceDg_OnSelectionChanged" CanUserAddRows="False" AutoGenerateColumns="False" x:Name="InvoiceDg" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="*" Header="Nom" Binding="{Binding FirstName}"/>
+                            <DataGridTextColumn Width="*" Header="Prénom" Binding="{Binding LastName}"/>
+                            <DataGridTextColumn Width="*" Header="Tel" Binding="{Binding Tel}"/>
+                            <DataGridTextColumn Width="*" Header="Ville" Binding="{Binding City}"/>
+                            <DataGridTextColumn Width="*" Header="Adresse" Binding="{Binding Street1}"/>
+                       
+
+                        </DataGrid.Columns>
+
+                        <DataGrid.DataContext>
+                            <entities:Supplier/>
+                        </DataGrid.DataContext>
+
+                    </DataGrid>
+                </DockPanel>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</UserControl>

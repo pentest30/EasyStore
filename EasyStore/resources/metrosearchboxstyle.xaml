@@ -1,0 +1,102 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:s="clr-namespace:System;assembly=mscorlib"
+                    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+                    xmlns:lx="http://wpflocalizeextension.codeplex.com"
+                    xmlns:icons="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                    xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                    xmlns:helpers="clr-namespace:EasyStore.helpers"
+                    xmlns:converters="clr-namespace:EasyStore.converters">
+  <Style x:Key="SearchToggleButton" TargetType="{x:Type ToggleButton}">
+    <Setter Property="FrameworkElement.UseLayoutRounding" Value="true"/>
+    <Setter Property="UIElement.SnapsToDevicePixels" Value="true"/>
+    <Setter Property="RenderOptions.ClearTypeHint" Value="Enabled"/>
+    <Setter Property="TextOptions.TextFormattingMode" Value="Display"/>
+    <Setter Property="FrameworkElement.VerticalAlignment" Value="Center"/>
+    <Setter Property="FrameworkElement.Margin" Value="0,0,1,0"/>
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type ToggleButton}">
+          <Border x:Name="border" Background="{DynamicResource WhiteBrush}" Padding="2,0,2,1"
+                  VerticalAlignment="Center">
+            <TextBlock x:Name="text" Text="{TemplateBinding ContentControl.Content}"
+                       Foreground="{DynamicResource AccentColorBrush}" FontSize="14" FontWeight="SemiBold"/>
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="ToggleButton.IsChecked" Value="True">
+              <Setter TargetName="border" Value="{DynamicResource AccentColorBrush}" Property="Border.Background"/>
+              <Setter TargetName="text" Value="{DynamicResource IdealForegroundColorBrush}"
+                      Property="TextBlock.Foreground"/>
+            </Trigger>
+            <MultiTrigger>
+              <MultiTrigger.Conditions>
+                <Condition Property="UIElement.IsMouseOver" Value="true"/>
+                <Condition Property="ToggleButton.IsChecked" Value="False"/>
+              </MultiTrigger.Conditions>
+              <MultiTrigger.Setters>
+                <Setter TargetName="border" Value="{DynamicResource GrayBrush7}" Property="Border.Background"/>
+                <Setter TargetName="text" Value="{DynamicResource BlackBrush}" Property="TextBlock.Foreground"/>
+              </MultiTrigger.Setters>
+            </MultiTrigger>
+            <MultiTrigger>
+              <MultiTrigger.Conditions>
+                <Condition Property="UIElement.IsMouseOver" Value="true"/>
+                <Condition Property="ToggleButton.IsChecked" Value="True"/>
+              </MultiTrigger.Conditions>
+              <MultiTrigger.Setters>
+                <Setter TargetName="border" Value="{DynamicResource HighlightBrush}" Property="Border.Background"/>
+              </MultiTrigger.Setters>
+            </MultiTrigger>
+            <Trigger Property="UIElement.IsEnabled" Value="false">
+              <Setter TargetName="text" Value="{DynamicResource GrayBrush5}" Property="TextBlock.Foreground"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="{x:Type helpers:MetroSearchBox}">
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type helpers:MetroSearchBox}">
+          <Grid>
+            <TextBox x:Name="PART_Text" MaxHeight="26" Padding="0,2,70,2"  
+                     Text="{Binding Text, RelativeSource={RelativeSource TemplatedParent}, UpdateSourceTrigger=PropertyChanged}">
+              <FrameworkElement.Style>
+                <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MetroTextBox}">
+                  <Style.Triggers>
+                    <Trigger Property="metro:TextBoxHelper.HasText" Value="true">
+                      <Setter Property="metro:TextBoxHelper.ClearTextButton" Value="true"/>
+                    </Trigger>
+                  </Style.Triggers>
+                </Style>
+              </FrameworkElement.Style>
+            </TextBox>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,3,25,3">
+              <ToggleButton x:Name="PART_MatchCaseToggle" Style="{StaticResource SearchToggleButton}" Content="Aa"
+                            IsEnabled="false"
+                            IsChecked="{Binding MatchCase, RelativeSource={RelativeSource TemplatedParent}, UpdateSourceTrigger=PropertyChanged}"
+                            ToolTip="{Binding MatchCaseTip, RelativeSource={RelativeSource TemplatedParent}}"/>
+              <ToggleButton x:Name="PART_MatchWordsToggle" Style="{StaticResource SearchToggleButton}" Content="[A]"
+                            IsEnabled="false"
+                            IsChecked="{Binding MatchWords, RelativeSource={RelativeSource TemplatedParent}, UpdateSourceTrigger=PropertyChanged}"
+                            ToolTip="{Binding MatchWordsTip, RelativeSource={RelativeSource TemplatedParent}}"/>
+              <ToggleButton x:Name="PART_MatchDiacriticsToggle" Style="{StaticResource SearchToggleButton}" Content="(á)"
+                            IsEnabled="false"
+                            IsChecked="{Binding MatchDiacritics, RelativeSource={RelativeSource TemplatedParent}, UpdateSourceTrigger=PropertyChanged}"
+                            ToolTip="{Binding MatchDiacriticsTip, RelativeSource={RelativeSource TemplatedParent}}"/>
+            </StackPanel>
+            <icons:PackIconMaterial Kind="Magnify" FrameworkElement.Margin="0,0,3,0" Control.Padding="4"
+                              FrameworkElement.HorizontalAlignment="Right" FrameworkElement.VerticalAlignment="Center"
+                              Control.Foreground="{DynamicResource AccentColorBrush}"
+                              FrameworkElement.Width="{Binding Path=(metro:TextBoxHelper.ButtonWidth), ElementName=PART_Text, Mode=OneWay}"
+                              FrameworkElement.Height="{Binding Path=(metro:TextBoxHelper.ButtonWidth), ElementName=PART_Text, Mode=OneWay}"
+                              UIElement.Visibility="{Binding Path=(metro:TextBoxHelper.HasText), ElementName=PART_Text, Converter={converters:BoolToVisibility CollapseInvisible=true, InvertBool=true}}"/>
+            <ProgressBar x:Name="PART_ProgressBar" Margin="1" Height="3" Opacity="0" IsIndeterminate="true"
+                         HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>
