@@ -156,3 +156,6 @@ E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.csproj.GenerateResource.
 E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.csproj.CoreCompileInputs.cache
 E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.exe
 E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.pdb
+E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.csprojResolveAssemblyReference.cache
+E:\Code sources\EasyStore\EasyStore\obj\Debug\RdlCompile.cache
+E:\Code sources\EasyStore\EasyStore\obj\Debug\RdlCompile.compiled
