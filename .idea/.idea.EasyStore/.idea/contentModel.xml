@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\pen\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_EasyStore.1177799462.00" t="ExcludeRecursive" />
+    <e p="E:\Code sources\EasyStore" t="IncludeFlat">
+      <e p="EasyStore" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="App.xaml" t="Include" />
+        <e p="App.xaml.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="converters" t="Include">
+          <e p="BoolToVisibility.cs" t="Include" />
+          <e p="CultureToFlowDirection.cs" t="Include" />
+          <e p="Nan2Visible.cs" t="Include" />
+        </e>
+        <e p="EasyStore.csproj" t="IncludeRecursive" />
+        <e p="Entities" t="Include">
+          <e p="Category.cs" t="Include" />
+          <e p="Customer.cs" t="Include" />
+          <e p="Invoice.cs" t="Include" />
+          <e p="InvoiceItem.cs" t="Include" />
+          <e p="InvoiceType.cs" t="Include" />
+          <e p="MesureUnit.cs" t="Include" />
+          <e p="ObjectContext.cs" t="Include" />
+          <e p="Product.cs" t="Include" />
+          <e p="Stock.cs" t="Include" />
+          <e p="Store.cs" t="Include" />
+          <e p="Supplier.cs" t="Include" />
+        </e>
+        <e p="helpers" t="Include">
+          <e p="HasAncestorOfType.cs" t="Include" />
+          <e p="MenuToolbar.cs" t="Include" />
+          <e p="MetroCircleButton.cs" t="Include" />
+          <e p="MetroFlatButton.cs" t="Include" />
+          <e p="MetroRibbon.cs" t="Include" />
+          <e p="MetroSearchBox.cs" t="Include" />
+          <e p="MetroToggle.cs" t="Include" />
+          <e p="MetroToolTip.cs" t="Include" />
+          <e p="PopupToggle.cs" t="Include" />
+          <e p="RibbonButton.cs" t="Include" />
+          <e p="RibbonDropButton.cs" t="Include" />
+          <e p="RibbonGroup.cs" t="Include" />
+          <e p="RibbonLabel.cs" t="Include" />
+          <e p="RibbonView.cs" t="Include" />
+          <e p="TextblockHelper.cs" t="Include" />
+          <e p="TextboxHelper.cs" t="Include" />
+          <e p="TextBoxInputBehavior.cs" t="Include" />
+          <e p="TextBoxMaskBehavior.cs" t="Include" />
+          <e p="ToolbarButton.cs" t="Include" />
+          <e p="ToolTipper.cs" t="Include" />
+        </e>
+        <e p="Images" t="Include">
+          <e p="Paomedia-Small-N-Flat-Shop.ico" t="Include" />
+          <e p="store.png" t="Include" />
+          <e p="store56px.png" t="Include" />
+        </e>
+        <e p="Infrastructure" t="Include">
+          <e p="AutomapperConfig.cs" t="Include" />
+          <e p="FileManager.cs" t="Include" />
+          <e p="ItextSharpHelper.cs" t="Include" />
+        </e>
+        <e p="MainWindow.xaml" t="Include" />
+        <e p="MainWindow.xaml.cs" t="Include" />
+        <e p="models" t="Include">
+          <e p="CustomerViewModel.cs" t="Include" />
+          <e p="InvoiceReportVm.cs" t="Include" />
+          <e p="InvoiceViewModel.cs" t="Include" />
+          <e p="ProductViewModel.cs" t="Include" />
+          <e p="StockViewModel.cs" t="Include" />
+          <e p="SupplierViewModel.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="Annotations.cs" t="Include" />
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="Reporting" t="Include">
+          <e p="BlRpt.rdlc" t="Include" />
+          <e p="Invoice.Designer.cs" t="Include" />
+          <e p="Invoice.xsc" t="Include" />
+          <e p="Invoice.xsd" t="Include" />
+          <e p="Invoice.xss" t="Include" />
+          <e p="InvoiceRpt.rdlc" t="Include" />
+        </e>
+        <e p="resources" t="Include">
+          <e p="buttonstyle.xaml" t="Include" />
+          <e p="checkboxstyle.xaml" t="Include" />
+          <e p="contextmenustyle.xaml" t="Include" />
+          <e p="CustomAccent.xaml" t="Include" />
+          <e p="datagridstyle.xaml" t="Include" />
+          <e p="expanderstyle.xaml" t="Include" />
+          <e p="gridsplitterstyle.xaml" t="Include" />
+          <e p="metrocirclebuttonstyle.xaml" t="Include" />
+          <e p="metroribbonstyle.xaml" t="Include" />
+          <e p="metrosearchboxstyle.xaml" t="Include" />
+          <e p="metrotogglestyle.xaml" t="Include" />
+          <e p="metrotooltipstyle.xaml" t="Include" />
+          <e p="metrowindowstyle.xaml" t="Include" />
+          <e p="popuptogglestyle.xaml" t="Include" />
+          <e p="shared.xaml" t="Include" />
+          <e p="tabcontrolstyle.xaml" t="Include" />
+          <e p="textblockstyle.xaml" t="Include" />
+          <e p="textboxstyle.xaml" t="Include" />
+          <e p="toolBarStyle.xaml" t="Include" />
+        </e>
+        <e p="views" t="Include">
+          <e p="BlReportView.xaml" t="Include" />
+          <e p="BlReportView.xaml.cs" t="Include" />
+          <e p="categoryView.xaml" t="Include" />
+          <e p="categoryView.xaml.cs" t="Include" />
+          <e p="customerview.xaml" t="Include" />
+          <e p="customerview.xaml.cs" t="Include" />
+          <e p="invoiceItemView.xaml" t="Include" />
+          <e p="invoiceItemView.xaml.cs" t="Include" />
+          <e p="invoiceListView.xaml" t="Include" />
+          <e p="invoiceListView.xaml.cs" t="Include" />
+          <e p="InvoiceReportView.xaml" t="Include" />
+          <e p="InvoiceReportView.xaml.cs" t="Include" />
+          <e p="productView.xaml" t="Include" />
+          <e p="productView.xaml.cs" t="Include" />
+          <e p="stockView.xaml" t="Include" />
+          <e p="stockView.xaml.cs" t="Include" />
+          <e p="StoreWin.xaml" t="Include" />
+          <e p="StoreWin.xaml.cs" t="Include" />
+          <e p="supplierView.xaml" t="Include" />
+          <e p="supplierView.xaml.cs" t="Include" />
+        </e>
+      </e>
+      <e p="EasyStore.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
