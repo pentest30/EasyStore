@@ -71,10 +71,20 @@ namespace EasyStore.views
                 case "Paquet":
                     product.MesureUnit = MesureUnit.Paquet;
                     break;
+                case "Boite":
+                    product.MesureUnit = MesureUnit.Boite;
+                    break;
+                default: product.MesureUnit = MesureUnit.Autre;
+                    break;
             }
 
             using (var db = new ObjectContext())
             {
+                if (db.Products.Count() > 5)
+                {
+                    MessageBox.Show("Evaluation","Vous pouvez pas ajouter plus de 5 produits dans cette version");
+                    return;
+                }
                 if (product.Id == 0)
                     db.InsertWithIdentity(product);
                 else
@@ -100,7 +110,7 @@ namespace EasyStore.views
 
         private void PrintBtn_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+           // throw new NotImplementedException();
         }
 
         private void ExpPdfBtn_OnClick(object sender, RoutedEventArgs e)
@@ -176,6 +186,12 @@ namespace EasyStore.views
             {
                 db.Update(product);
                 InvoiceDg.ItemsSource = db.Products.ToList();
+                var stock = new StockHistoric();
+                stock.Product_Id = product.Id;
+                stock.Qnt = Convert.ToInt32(TxtQnt.Value);
+                stock.Date = DateTime.Now;
+                stock.Movement = MovementStock.Entrée;
+                db.InsertWithIdentity(stock);
             }
         }
     }

@@ -752,7 +752,7 @@
     <Height>3.81256in</Height>
     <Style />
   </Body>
-  <Width>6.83506in</Width>
+  <Width>6.84195in</Width>
   <Page>
     <PageHeader>
       <Height>3.91583cm</Height>
@@ -942,6 +942,42 @@
           <Height>0.64326cm</Height>
           <Width>6.56986cm</Width>
           <ZIndex>5</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox1">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Facture</Value>
+                  <Style>
+                    <FontStyle>Italic</FontStyle>
+                    <FontFamily>calibri</FontFamily>
+                    <FontSize>24pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <TextDecoration>Underline</TextDecoration>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>0.78748cm</Top>
+          <Left>11.41251cm</Left>
+          <Height>2.34088cm</Height>
+          <Width>5.96604cm</Width>
+          <ZIndex>6</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>

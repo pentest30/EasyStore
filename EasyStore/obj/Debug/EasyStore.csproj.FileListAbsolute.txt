@@ -85,7 +85,6 @@ E:\Code sources\EasyStore\EasyStore\bin\Debug\LoadingIndicators.WPF.dll
 E:\Code sources\EasyStore\EasyStore\bin\Debug\MahApps.Metro.dll
 E:\Code sources\EasyStore\EasyStore\bin\Debug\MahApps.Metro.IconPacks.dll
 E:\Code sources\EasyStore\EasyStore\bin\Debug\Microsoft.ReportViewer.WinForms.dll
-E:\Code sources\EasyStore\EasyStore\bin\Debug\System.Net.Http.dll
 E:\Code sources\EasyStore\EasyStore\bin\Debug\System.Windows.Interactivity.dll
 E:\Code sources\EasyStore\EasyStore\bin\Debug\WPFLocalizeExtension.dll
 E:\Code sources\EasyStore\EasyStore\bin\Debug\XAMLMarkupExtensions.dll
@@ -99,7 +98,6 @@ E:\Code sources\EasyStore\EasyStore\bin\Debug\MahApps.Metro.pdb
 E:\Code sources\EasyStore\EasyStore\bin\Debug\MahApps.Metro.xml
 E:\Code sources\EasyStore\EasyStore\bin\Debug\MahApps.Metro.IconPacks.pdb
 E:\Code sources\EasyStore\EasyStore\bin\Debug\MahApps.Metro.IconPacks.xml
-E:\Code sources\EasyStore\EasyStore\bin\Debug\System.Net.Http.xml
 E:\Code sources\EasyStore\EasyStore\bin\Debug\WPFLocalizeExtension.pdb
 E:\Code sources\EasyStore\EasyStore\bin\Debug\WPFLocalizeExtension.xml
 E:\Code sources\EasyStore\EasyStore\bin\Debug\XAMLMarkupExtensions.pdb
@@ -124,6 +122,7 @@ E:\Code sources\EasyStore\EasyStore\obj\Debug\views\invoiceItemView.g.cs
 E:\Code sources\EasyStore\EasyStore\obj\Debug\views\invoiceListView.g.cs
 E:\Code sources\EasyStore\EasyStore\obj\Debug\views\InvoiceReportView.g.cs
 E:\Code sources\EasyStore\EasyStore\obj\Debug\views\productView.g.cs
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\StockHistoricView.g.cs
 E:\Code sources\EasyStore\EasyStore\obj\Debug\views\stockView.g.cs
 E:\Code sources\EasyStore\EasyStore\obj\Debug\views\StoreWin.g.cs
 E:\Code sources\EasyStore\EasyStore\obj\Debug\views\supplierView.g.cs
@@ -147,15 +146,14 @@ E:\Code sources\EasyStore\EasyStore\obj\Debug\views\customerview.baml
 E:\Code sources\EasyStore\EasyStore\obj\Debug\views\invoiceItemView.baml
 E:\Code sources\EasyStore\EasyStore\obj\Debug\views\invoiceListView.baml
 E:\Code sources\EasyStore\EasyStore\obj\Debug\views\productView.baml
+E:\Code sources\EasyStore\EasyStore\obj\Debug\views\StockHistoricView.baml
 E:\Code sources\EasyStore\EasyStore\obj\Debug\views\stockView.baml
 E:\Code sources\EasyStore\EasyStore\obj\Debug\views\StoreWin.baml
 E:\Code sources\EasyStore\EasyStore\obj\Debug\views\supplierView.baml
 E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.g.resources
 E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.Properties.Resources.resources
-E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.csproj.GenerateResource.Cache
+E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.csproj.GenerateResource.cache
 E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.csproj.CoreCompileInputs.cache
+E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.csproj.CopyComplete
 E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.exe
 E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.pdb
-E:\Code sources\EasyStore\EasyStore\obj\Debug\EasyStore.csprojResolveAssemblyReference.cache
-E:\Code sources\EasyStore\EasyStore\obj\Debug\RdlCompile.cache
-E:\Code sources\EasyStore\EasyStore\obj\Debug\RdlCompile.compiled

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Code sources\EasyStore\EasyStore\obj\Debug\
+C:\Users\pc\Documents\EasyStore\EasyStore\EasyStore\obj\Debug\
 EasyStore
 none
 false
 DEBUG;TRACE
-E:\Code sources\EasyStore\EasyStore\App.xaml
-301464981864
+C:\Users\pc\Documents\EasyStore\EasyStore\EasyStore\App.xaml
+321727552674
 
-61775215407
-30-1897139148
-MainWindow.xaml;resources\buttonstyle.xaml;resources\checkboxstyle.xaml;resources\contextmenustyle.xaml;resources\CustomAccent.xaml;resources\datagridstyle.xaml;resources\expanderstyle.xaml;resources\gridsplitterstyle.xaml;resources\metrocirclebuttonstyle.xaml;resources\metroribbonstyle.xaml;resources\metrosearchboxstyle.xaml;resources\metrotogglestyle.xaml;resources\metrotooltipstyle.xaml;resources\metrowindowstyle.xaml;resources\popuptogglestyle.xaml;resources\shared.xaml;resources\tabcontrolstyle.xaml;resources\textblockstyle.xaml;resources\textboxstyle.xaml;resources\toolBarStyle.xaml;views\BlReportView.xaml;views\categoryView.xaml;views\customerview.xaml;views\invoiceItemView.xaml;views\invoiceListView.xaml;views\InvoiceReportView.xaml;views\productView.xaml;views\stockView.xaml;views\StoreWin.xaml;views\supplierView.xaml;
+672111277510
+29-106232835
+MainWindow.xaml;resources\buttonstyle.xaml;resources\checkboxstyle.xaml;resources\contextmenustyle.xaml;resources\CustomAccent.xaml;resources\datagridstyle.xaml;resources\expanderstyle.xaml;resources\gridsplitterstyle.xaml;resources\metrocirclebuttonstyle.xaml;resources\metroribbonstyle.xaml;resources\metrosearchboxstyle.xaml;resources\metrotogglestyle.xaml;resources\metrotooltipstyle.xaml;resources\metrowindowstyle.xaml;resources\popuptogglestyle.xaml;resources\shared.xaml;resources\tabcontrolstyle.xaml;resources\textblockstyle.xaml;resources\textboxstyle.xaml;resources\toolBarStyle.xaml;views\BlReportView.xaml;views\categoryView.xaml;views\customerview.xaml;views\invoiceItemView.xaml;views\invoiceListView.xaml;views\InvoiceReportView.xaml;views\payementView.xaml;views\productView.xaml;views\StockHistoricView.xaml;views\stockView.xaml;views\StoreWin.xaml;views\supplierView.xaml;
 
 False
 

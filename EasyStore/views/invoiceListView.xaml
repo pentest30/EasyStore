@@ -37,22 +37,22 @@
                 <Separator/>
                 <ToolBarTray >
                     <ToolBar >
-                        <helpers:MetroCircleButton  Margin="2" 
-                            Style="{StaticResource MetroCircleButtonBase}"
-                            Content="Ajout" 
+                        <helpers:MetroFlatButton  Margin="2" 
+                            Style="{StaticResource ButtonBase}"
+                            Content="Nouvelle .Fac" 
                             x:Name="AddOrderBtn" 
                             Click="AddOrderBtn_OnClick" 
                             IconKind="Plus" />
-                        <helpers:MetroCircleButton Margin="2" 
-                                                  Style="{StaticResource MetroCircleButtonBase}" 
-                                                  Content="Ajout" 
+                        <helpers:MetroFlatButton Margin="2" 
+                                                  Style="{StaticResource ButtonBase}" 
+                                                  Content="Imp. facture" 
                                                   IconKind="Printer" 
                                                    x:Name="RptBtn"
                                                    Click="RptBtn_OnClick"
                                                  />
-                        <helpers:MetroCircleButton Margin="2" 
-                                                  Style="{StaticResource MetroCircleButtonBase}" 
-                                                  Content="Ajout" 
+                        <helpers:MetroFlatButton Margin="2" 
+                                                  Style="{StaticResource ButtonBase}" 
+                                                  Content="Imp. Bon" 
                                                   IconKind="Printer" 
                                                    x:Name="BlRptBtn"
                                                    Click="BlRptBtn_OnClick"
@@ -96,8 +96,10 @@
                     <DataGridTextColumn Width="*" 
                                         Header="Reste à payer" 
                                         Binding="{Binding Left}"/>
-                  
-                </DataGrid.Columns>
+                    <DataGridTextColumn Width="*" Header="Etat" Binding="{Binding Status}"/>
+
+
+</DataGrid.Columns>
                 <DataGrid.DataContext>
                     <entities:Invoice/>
                 </DataGrid.DataContext>
@@ -141,7 +143,7 @@
 
                     <DataGridTextColumn Width="*" Header="Net" Binding="{Binding THT}"/>
                     <DataGridTextColumn Width="*" Header="TTC" Binding="{Binding TTC}"/>
-
+                  
                 </DataGrid.Columns>
               
 

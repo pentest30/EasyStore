@@ -45,7 +45,7 @@
                     <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
 
-                <DataGrid x:Name="ProductDg"   SelectionChanged="ProductDg_OnSelectionChanged" CanUserAddRows="True" AutoGenerateColumns="False">
+                <DataGrid x:Name="ProductDg"   SelectionChanged="ProductDg_OnSelectionChanged" CanUserAddRows="False" AutoGenerateColumns="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn Width="*"  Header="Désignation" Binding="{Binding Name}"/>
                         <DataGridTextColumn  Header="Prix unitaire" Binding="{Binding UnitPrice}"/>

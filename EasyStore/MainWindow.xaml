@@ -11,6 +11,7 @@
         xmlns:wpf="clr-namespace:LoadingIndicators.WPF;assembly=LoadingIndicators.WPF"
         mc:Ignorable="d"
                    Style="{StaticResource MetroWindow}"
+                 
         Title="EASY STORE" WindowState="Maximized" >
     <Grid>
         <Grid.RowDefinitions>
@@ -21,14 +22,22 @@
         <my:MetroRibbon Style="{StaticResource MetroRibbonBase}">
             <TabItem  Style="{StaticResource TabItemBase}" Header="Store management" Margin="0" Padding="0">
                 <StackPanel Orientation="Horizontal" >
-                    
-                    <my:RibbonGroup Title="Article et stock" Style="{StaticResource RibbonGroupBase}" >
+                    <my:RibbonGroup Title="Home" Style="{StaticResource RibbonGroupBase}" >
                         <StackPanel Orientation="Horizontal">
-                            <my:RibbonButton Margin="5"  Click="StoreBtn_OnClick"  Style="{StaticResource RibbonButtonBase}" x:Name="StoreBtn"  Content="Etablissement" IconKind="Store" IsEnlarged="true" ></my:RibbonButton>
+                            <my:RibbonButton Margin="5"  Click="StoreBtn_OnClick"  Style="{StaticResource RibbonButtonBase}" x:Name="StoreBtn"  Content="Magasin" IconKind="Store" IsEnlarged="true" ></my:RibbonButton>
 
+
+                        </StackPanel>
+
+                    </my:RibbonGroup>
+
+<my:RibbonGroup Title="Article" Style="{StaticResource RibbonGroupBase}" >
+                        <StackPanel Orientation="Horizontal">
+                  
                             <my:RibbonButton Style="{StaticResource RibbonButtonBase}" x:Name="CatBtn"  Content="Catégorie" IconKind="Group" Margin="5" IsEnlarged="true"></my:RibbonButton>
+                            <my:RibbonButton Style="{StaticResource RibbonButtonBase}" x:Name="BrandBtn"  Content="Marque" IconKind="CodeBraces" Margin="5" IsEnlarged="true"></my:RibbonButton>
 
-                            <my:RibbonButton Style="{StaticResource RibbonButtonBase}" Content="Articles" x:Name="ProductBtn" Click="ProductBtn_OnClick" IconKind="PlaylistCheck" Margin="5" IsEnlarged="True"></my:RibbonButton>
+                            <my:RibbonButton Style="{StaticResource RibbonButtonBase}" Content="Articles" x:Name="ProductBtn" Click="ProductBtn_OnClick" IconKind="Barcode" Margin="5" IsEnlarged="True"></my:RibbonButton>
                         </StackPanel>
                         
                     </my:RibbonGroup>
@@ -44,12 +53,18 @@
 
                             <my:RibbonButton x:Name="CustomerBtn" Click="CustomerBtn_OnClick" Style="{StaticResource RibbonButtonBase}" Content="Clients"  IconKind="Account" IsEnlarged="true"/>
 
-                            <my:RibbonButton Style="{StaticResource RibbonButtonBase}"   Content="Factures" IconKind="Bank" x:Name="Invoicebtn" Click="Invoicebtn_OnClick" IsEnlarged="true"></my:RibbonButton>
+                            <my:RibbonButton Style="{StaticResource RibbonButtonBase}"   Content="Factures" IconKind="Import" x:Name="Invoicebtn" Click="Invoicebtn_OnClick" IsEnlarged="true"></my:RibbonButton>
 
                             <my:RibbonButton Click="NewOrderBtn_OnClick" Style="{StaticResource RibbonButtonBase}" Content="Nouvelle Vente" x:Name="NewOrderBtn"  IconKind="Sale" IsEnlarged="true"></my:RibbonButton>
+                            <my:RibbonButton Click="PayementBtn_OnClick"  Style="{StaticResource RibbonButtonBase}" Content="Payement" x:Name="PayementBtn"  IconKind="Parking" IsEnlarged="true"></my:RibbonButton>
                         </StackPanel>
                     </my:RibbonGroup>
+                    <my:RibbonGroup Title="Stock" Style="{StaticResource RibbonGroupBase}" >
+                        <StackPanel Orientation="Horizontal">
 
+                            <my:RibbonButton x:Name="CustomerBtn2" Click="CustomerBtn2_OnClick" Style="{StaticResource RibbonButtonBase}" Content="Historique  stock"  IconKind="Store24Hour" IsEnlarged="true"/>
+               </StackPanel>
+                    </my:RibbonGroup>
                 </StackPanel>
 
             </TabItem>

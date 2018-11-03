@@ -22,5 +22,7 @@ namespace EasyStore.Entities
         public ITable<Stock> Stocks => GetTable<Stock>();
         public ITable<Store> Stores => GetTable<Store>();
         public ITable<Supplier> Suppliers => GetTable<Supplier>();
+        public ITable<StockHistoric> StocksHistoric => GetTable<StockHistoric>();
+        public ITable<Payement> Payement => GetTable<Payement>();
     }
 }

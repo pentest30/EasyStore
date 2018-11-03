@@ -105,7 +105,7 @@ namespace EasyStore.views
 
         private void PrintBtn_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         private void ExpPdfBtn_OnClick(object sender, RoutedEventArgs e)

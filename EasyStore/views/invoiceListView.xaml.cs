@@ -77,7 +77,7 @@ namespace EasyStore.views
             PdfPCell leftCell = new PdfPCell();
             leftCell.Border = 0;
 
-            iTextSharp.text.Paragraph paragraph = new iTextSharp.text.Paragraph($"Facture",
+            Paragraph paragraph = new Paragraph($"Facture",
                 FontFactory.GetFont("Calibri", 24, BaseColor.BLACK));
 
             paragraph.Alignment = Element.ALIGN_LEFT;
@@ -105,7 +105,7 @@ namespace EasyStore.views
             tblHeader.AddCell(rightCell);
             doc.Add(tblHeader);
 
-            iTextSharp.text.Paragraph p = new iTextSharp.text.Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_LEFT, 1)));
+            Paragraph p = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_LEFT, 1)));
             // call the below to add the line when required.
             doc.Add(p);
             doc.Add(new Chunk(Environment.NewLine));
@@ -227,7 +227,7 @@ namespace EasyStore.views
             PdfPCell leftCell = new PdfPCell();
             leftCell.Border = 0;
 
-            iTextSharp.text.Paragraph paragraph = new iTextSharp.text.Paragraph($"Bon de livraison",
+            Paragraph paragraph = new Paragraph($"Bon de livraison",
                 FontFactory.GetFont("Calibri", 24, BaseColor.BLACK));
 
             paragraph.Alignment = Element.ALIGN_LEFT;
@@ -356,8 +356,7 @@ namespace EasyStore.views
             {
                 var invoiceItems = db.InvoiceItems.LoadWith(x => x.Product).Where(x => x.Invoice_Id == invoice.Id);
                 var store = db.Stores.FirstOrDefault();
-                foreach (
-                    var invoiceItem in invoiceItems)
+                foreach (var invoiceItem in invoiceItems)
                 {
                    
                     var reportVm = new InvoiceReportVm();
@@ -397,8 +396,7 @@ namespace EasyStore.views
             {
                 var invoiceItems = db.InvoiceItems.LoadWith(x => x.Product).Where(x => x.Invoice_Id == invoice.Id);
                 var store = db.Stores.FirstOrDefault();
-                foreach (
-                    var invoiceItem in invoiceItems)
+                foreach (var invoiceItem in invoiceItems)
                 {
                    
                     var reportVm = new InvoiceReportVm();

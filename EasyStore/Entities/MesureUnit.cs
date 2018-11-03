@@ -5,7 +5,10 @@
         Kilogramme,
         Litre,
         Paquet,
-        Carton
+        Carton,
+        Boite,
+        Cartouche,
+        Autre
 
     }
 }

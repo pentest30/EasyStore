@@ -49,5 +49,15 @@ namespace EasyStore
             var win = new StoreWin();
             win.ShowDialog();
         }
+
+        private void CustomerBtn2_OnClick(object sender, RoutedEventArgs e)
+        {
+            ContentControl.Content = new StockHistoricView();
+        }
+
+        private void PayementBtn_OnClick(object sender, RoutedEventArgs e)
+        {
+            ContentControl.Content = new payementView();
+        }
     }
 }

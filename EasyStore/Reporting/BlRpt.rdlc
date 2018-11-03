@@ -434,6 +434,14 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
+                <Value>Client : </Value>
+                <Style>
+                  <FontFamily>calibri</FontFamily>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
                 <Value>=Fields!Customer.Value</Value>
                 <Style>
                   <FontFamily>calibri</FontFamily>
@@ -480,10 +488,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox20</rd:DefaultName>
-        <Top>1.53141cm</Top>
+        <Top>1.56669cm</Top>
         <Left>8.32618cm</Left>
         <Height>0.67938cm</Height>
-        <Width>4.14042cm</Width>
+        <Width>2.15604cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -515,10 +523,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox21</rd:DefaultName>
-        <Top>1.53141cm</Top>
-        <Left>12.4666cm</Left>
+        <Top>1.56669cm</Top>
+        <Left>10.65861cm</Left>
         <Height>0.67938cm</Height>
-        <Width>4.72188cm</Width>
+        <Width>6.52987cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -552,7 +560,7 @@
         <Top>2.38718cm</Top>
         <Left>8.29091cm</Left>
         <Height>0.67938cm</Height>
-        <Width>4.14042cm</Width>
+        <Width>2.19131cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -586,9 +594,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox21</rd:DefaultName>
         <Top>2.38718cm</Top>
-        <Left>12.43132cm</Left>
+        <Left>10.65861cm</Left>
         <Height>0.67938cm</Height>
-        <Width>4.75716cm</Width>
+        <Width>6.52987cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>

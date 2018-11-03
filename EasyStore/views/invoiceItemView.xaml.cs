@@ -25,7 +25,7 @@ namespace EasyStore.views
           
             using (var db = new ObjectContext())
             {
-                ProductDg.ItemsSource = db.Products.ToList();
+                ProductDg.ItemsSource = db.Products.Where(x=>x.Qnt>0).ToList();
                 CustomersCb.ItemsSource = db.Customers.ToList();
             }
         }
@@ -46,7 +46,7 @@ namespace EasyStore.views
                 else invoiceItem.Qnt += 1;
 
                 invoiceItem.THT = invoiceItem.Qnt * invoiceItem.UnitPrice;
-                invoiceItem.TTC = (invoiceItem.Qnt * invoiceItem.UnitPrice) + invoiceItem.THT * invoiceItem.Tax;
+                invoiceItem.TTC = invoiceItem.Qnt * invoiceItem.UnitPrice + invoiceItem.THT * invoiceItem.Tax;
                 invoiceItems.Add(invoiceItem);
             }
             else
@@ -59,7 +59,7 @@ namespace EasyStore.views
                         first.Qnt += (int) TxtQnt.Value;
                     else first.Qnt += 1;
                     first.THT = first.Qnt * first.UnitPrice;
-                    first.TTC = (first.Qnt * first.UnitPrice) + first.THT * first.Tax;
+                    first.TTC = first.Qnt * first.UnitPrice + first.THT * first.Tax;
                 }
                
             }
@@ -90,7 +90,7 @@ namespace EasyStore.views
             {
                 var invoice = new Invoice();
                 invoice.CreationDate = DateTime.Now;
-                invoice.InvoiceNumber =DateTime.Now.Year+"-"+ (db.Invoices.Count() + 1).ToString().PadLeft(4,'0');
+                invoice.InvoiceNumber = $"{DateTime.Now.Year}-{(db.Invoices.Count() + 1).ToString().PadLeft(4,'0')}";
                 invoice.Customer_Id = ((Customer) CustomersCb.SelectedItem).Id;
                 invoice.InvoiceType = InvoiceType.Facture;
                 invoice.IsValid = true;
@@ -99,7 +99,27 @@ namespace EasyStore.views
                 invoice.THT =(decimal) invoiceItems.Sum(x=>x.THT);
                 invoice.TTC = invoiceItems.Sum(x=>x.TTC);
                 invoice.Left = decimal.Subtract(invoice.TTC , invoice.PaidAmmount);
-                db.InsertWithInt64Identity(invoice);
+                if (invoice.Left > 0)
+                {
+                    var customer = db.Customers.FirstOrDefault(x => x.Id == invoice.Customer_Id);
+                    if (customer != null)
+                    {
+                        customer.Debt += invoice.Left;
+                        if (customer.Debt <= 0)
+                        {
+                            invoice.Status = InvoiceStatus.Reglée;
+                            invoice.Left = 0;
+                        }
+                        else
+                        {
+                            invoice.Left = customer.Debt;
+                            invoice.Status = invoice.Left < invoice.PaidAmmount ? InvoiceStatus.Reglée : InvoiceStatus.Non_Reglée;
+                            
+                        }
+                        db.InsertWithInt64Identity(invoice);
+                    }
+                    db.Update(customer);
+                }
                 var newInvoice = db.Invoices.FirstOrDefault(x =>
                     x.CreationDate == invoice.CreationDate && x.Customer_Id == invoice.Customer_Id &&
                     x.InvoiceNumber == invoice.InvoiceNumber);
@@ -119,6 +139,12 @@ namespace EasyStore.views
                         stock.Qnt = 0;
                         db.Update(stock);
                     }
+                    var stock2 = new StockHistoric();
+                    stock2.Product_Id = stock.Id;
+                    stock2.Qnt = invoiceItem.Qnt;
+                    stock2.Date = DateTime.Now;
+                    stock2.Movement = MovementStock.Sortie;
+                    db.InsertWithIdentity(stock2);
                 }
                 MessageBox.Show("Enregistrement terminé avec succcés !", "Enregistrement", MessageBoxButton.OK,
                     MessageBoxImage.Information);
@@ -130,7 +156,7 @@ namespace EasyStore.views
 
         private void PrintBtn_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+           // throw new NotImplementedException();
         }
 
         private void ProductDg_OnSelectionChanged(object sender, SelectionChangedEventArgs e)

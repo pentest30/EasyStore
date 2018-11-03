@@ -7,7 +7,7 @@ namespace EasyStore.Entities
     public class Stock
     {
         [PrimaryKey, NotNull]
-        [Column(IsIdentity = true, SkipOnInsert = false)]
+        [Column(IsIdentity = true, SkipOnInsert = true)]
         public Int64 Id { get; set; }
 
         [Column, Nullable]

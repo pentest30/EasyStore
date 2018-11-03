@@ -37,6 +37,9 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Paomedia-Small-N-Flat-Shop.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>..\packages\AutoMapper.6.2.2\lib\net40\AutoMapper.dll</HintPath>
@@ -99,7 +102,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Entities\InvoiceStatus.cs" />
     <Compile Include="Entities\ObjectContext.cs" />
+    <Compile Include="Entities\Payement.cs" />
+    <Compile Include="Entities\StockHistoric.cs" />
+    <Compile Include="helpers\CustomDatePicker.cs" />
     <Compile Include="helpers\TextBoxInputBehavior.cs" />
     <Compile Include="Infrastructure\AutomapperConfig.cs" />
     <Compile Include="Infrastructure\FileManager.cs" />
@@ -132,8 +139,14 @@
       <DependentUpon>InvoiceReportView.xaml</DependentUpon>
     </Compile>
     <Compile Include="models\InvoiceReportVm.cs" />
+    <Compile Include="views\payementView.xaml.cs">
+      <DependentUpon>payementView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\productView.xaml.cs">
       <DependentUpon>productView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\StockHistoricView.xaml.cs">
+      <DependentUpon>StockHistoricView.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\stockView.xaml.cs">
       <DependentUpon>stockView.xaml</DependentUpon>
@@ -288,7 +301,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="views\payementView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="views\productView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\StockHistoricView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -362,6 +383,8 @@
   <ItemGroup>
     <Resource Include="Images\Paomedia-Small-N-Flat-Shop.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Paomedia-Small-N-Flat-Shop.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

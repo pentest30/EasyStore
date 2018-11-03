@@ -35,6 +35,8 @@ namespace EasyStore.Entities
         public decimal Left { get; set; }
         [Column, NotNull]
         public Int64?  Customer_Id { get; set; }
+        [Column, NotNull]
+        public InvoiceStatus Status { get; set; }
 
         public List<InvoiceItem> InvoiceItems { get; set; }
     }
